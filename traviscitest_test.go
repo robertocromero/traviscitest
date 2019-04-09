@@ -5,12 +5,23 @@ import (
 	"testing"
 )
 
-func TestIsItFoo(t *testing.T) {
-	word := "foo"
-	foo, err := IsItFoo(word)
+
+func TestIsHelloWorldOK(t *testing.T) {
+	word := "hello"
+	boolTrue, err := IsHelloWorld(word)
 	if err != nil {
 		t.Fatal(err)
 	}
-	assert.Equal(t, true, foo)
+	assert.Equal(t, true, boolTrue)
+}
+
+func TestIsHelloWorldFail(t *testing.T) {
+	word := "notHello"
+	boolFalse, err := IsHelloWorld(word)
+	if err == nil {
+		t.Fatal(err)
+	}
+	assert.Equal(t, false, boolFalse)
+	
 }
 

@@ -1,13 +1,16 @@
 package traviscitest
 
 import "errors"
+import "fmt"
 
-func IsItFoo(word string) (bool, error) {
+func IsHelloWorld(word string) (bool, error) {
 	switch word {
-	case "foo":
+	case "hello":
+		fmt.Println("Hello World!")
 		return true, nil
-	case "bar":
-		err := errors.New("ON NO, it's bar!")
+	case "notHello":
+		err := errors.New("What's this?")
+		fmt.Println("This is not Hello World!")
 		return false, err
 	}
 	return false, nil

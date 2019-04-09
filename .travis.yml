@@ -3,7 +3,7 @@ language: go
 notificaitons:
   email:
     recipients: roberto.romero@safelayer.com
-    on_success: change
+    on_success: always
     on_failure: always
     
 branches:

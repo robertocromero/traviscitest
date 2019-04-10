@@ -6,6 +6,12 @@ notificaitons:
     on_success: always
     on_failure: always
 
+addons:
+  sonarcloud:
+    organization: "robertoromeroi"
+    token:
+      secure: $SONAR_TOKEN
+
 branches:
   only:
     - master
@@ -16,3 +22,6 @@ before_script:
 
 script:
 - go test -v
+
+script:
+  - sonar-scanner

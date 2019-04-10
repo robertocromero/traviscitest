@@ -21,7 +21,5 @@ before_script:
 - go get github.com/bmizerany/assert
 
 script:
-- go test -v
-
-script:
+  - go test -v
   - sonar-scanner

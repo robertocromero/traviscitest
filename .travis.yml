@@ -5,6 +5,7 @@ notificaitons:
     recipients: roberto.romero@safelayer.com
     on_success: always
     on_failure: always
+
 branches:
   only:
     - master
@@ -13,3 +14,5 @@ branches:
 before_script:
 - go get github.com/bmizerany/assert
 
+script:
+- go test -v

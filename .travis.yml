@@ -8,7 +8,7 @@ notificaitons:
 
 addons:
   sonarcloud:
-    organization: "robertoromeroi"
+    organization: "robertocromero"
     token:
       secure: $SONAR_TOKEN
 
